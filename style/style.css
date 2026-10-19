@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.first-p{
+    background-color: #394B32;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+     font-weight: 100;
+}
+ .header-section{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+ }
+ nav > a{
+   text-decoration: none;
+   padding: 12px;
+   color: #796A59;
+ }
+ .num{
+   display: flex;
+   gap: 6px;
+ }
+
+ @media screen and (max-width:550px) {
+    nav{
+        display: none;
+    }
+ }
