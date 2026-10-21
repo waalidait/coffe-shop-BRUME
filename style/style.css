@@ -1,32 +1,328 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    font-family: Playfair Display;
 }
 
-.first-p{
+body {
+    background-color: #FAF7F0;
+}
+
+.first-p {
     background-color: #394B32;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
-     font-weight: 100;
+    font-weight: 100;
+    width: 100%;
 }
- .header-section{
+
+.header-section {
     display: flex;
     justify-content: space-around;
     padding-top: 30px;
- }
- nav > a{
-   text-decoration: none;
-   padding: 12px;
-   color: #796A59;
- }
- .num{
-   display: flex;
-   gap: 6px;
- }
+}
 
- @media screen and (max-width:550px) {
-    nav{
+nav>a {
+    text-decoration: none;
+    padding: 12px;
+    color: #796A59;
+}
+
+.num {
+    display: flex;
+    gap: 6px;
+}
+
+@media screen and (max-width:550px) {
+    nav {
         display: none;
     }
- }
+}
+
+/*image*/
+
+.image {
+    background-color: #E8DBC7;
+    display: grid;
+    grid-row: 1/3;
+    width: 100%;
+    height: 609px;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}   
+.image > img{
+    width: 80%;
+    font-family: DM Sans;
+}
+ 
+ 
+.image > div{
+    width: 100%;
+   display: flex;
+   justify-content: space-around;
+   margin-top: 10px;
+     font-size: 10px;
+}
+.text-white{
+    font-size: 8px;
+    background-color: white;
+    padding: 5px;
+     border-radius: 13px;
+    
+}
+ 
+.span-01 {
+    font-family: DM Sans;
+    padding-left: 20px;
+    color: #394B32;
+    font-size: 12px;
+}
+
+.span-02 {
+    font-family: DM Sans;
+    padding-left: 20px;
+    color: #394B32;
+    font-size: 12px;
+}
+
+.pause {
+    padding-left: 20px;
+    font-weight: 200;
+    font-size: 50px;
+}
+
+.text-2 {
+    padding-left: 20px;
+    color: #796A59;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    grid-template-rows: 1fr 2fr;
+}
+
+.option {
+    margin-top: 20px;
+    /* grid-row: 2/3; */
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    grid-template-rows: 10px 100px 10px 100px 10px 100px 10px 100px;
+    grid-template-areas:
+        "r1 r1 l1 l1"
+        "first first second second"
+        "l2 l2 r2 r2"
+        "t f f fi"
+        "l3 l3 r3 r3"
+        "s se se a"
+        "l4 l4 r4 r4"
+        "last-div last-div last-1-div last-1-div";
+     
+    place-items:center;
+    
+}
+
+.l1{
+    color: #796A59;
+    font-family:DM Sans;
+    text-align: left;
+    grid-area: l1;
+}
+.r1{
+     font-family: DM Sans;
+     font-weight: 700;
+    text-align: right;
+    grid-area: r1;
+}
+.l2{
+     font-family: DM Sans;
+     font-weight: 700;
+   text-align: right;
+    grid-area: l2;
+}
+.r2{
+     color: #796A59;
+    font-family:DM Sans;
+    text-align: left;
+    grid-area: r2;
+}
+.l3{
+     font-family: DM Sans;
+     font-weight: 700;
+    text-align: right;
+    grid-area: l3;
+}
+.r3{
+     color: #796A59;
+    font-family:DM Sans;
+    text-align: left;
+    grid-area: r3;
+}
+
+.l4{
+     font-family: DM Sans;
+     font-weight: 700;
+    text-align: right;
+    grid-area: l4;
+}
+.r4{
+     color: #796A59;
+    font-family:DM Sans;
+    text-align: left;;
+    grid-area: r4;
+}
+
+.first-div {
+    background-color: rgb(255, 255, 255);
+    grid-area: first;
+    border: 1px solid  #DFD5C8 ;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+
+.second-div {
+    background-color: rgb(255, 255, 255);
+    grid-area: second;
+    border: 1px solid  #DFD5C8 ;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+}
+.t-div {
+    background-color: white;
+    grid-area: t;
+     border: 1px solid  #DFD5C8 ;
+     border-radius: 10px;
+    height: 55%;
+    width: 80%;
+}
+.f-div {
+      background-color: white;
+    grid-area: t;
+     border: 1px solid  #DFD5C8 ;
+     border-radius: 10px;
+    height: 55%;
+    width: 80%;
+    grid-area: f;
+}
+.fi-div {
+     background-color: white;
+    grid-area: t;
+     border: 1px solid  #DFD5C8 ;
+     border-radius: 10px;
+    height: 55%;
+    width: 80%;
+    grid-area: f;
+    grid-area: fi;
+}
+.s-div {
+    background-color: white;
+    grid-area: t;
+     border: 1px solid  #DFD5C8 ;
+     border-radius: 10px;
+    height: 55%;
+    width: 80%;
+    grid-area: f;
+    grid-area: s;
+}
+.se-div {
+    background-color: white;
+    grid-area: t;
+     border: 1px solid  #DFD5C8 ;
+     border-radius: 10px;
+    height: 55%;
+    width: 80%;
+    grid-area: f;
+    grid-area: se;
+}
+
+.a-div {
+   background-color: white;
+    grid-area: t;
+     border: 1px solid  #DFD5C8 ;
+     border-radius: 10px;
+    height: 55%;
+    width: 80%;
+    grid-area: f;
+    grid-area: a;
+}
+
+.last-div{
+     background-color: rgb(249, 252, 253);
+      border: 1px solid  #DFD5C8 ;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    grid-area: last-div;
+}
+
+.last-1-div{
+     background-color: rgb(255, 253, 255);
+      border: 1px solid  #DFD5C8 ;
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    grid-area: last-1-div;
+}
+
+.label{
+ width: 80%;
+  
+}
+
+@media screen and (max-width:550px) {
+ .grid{
+          grid-template-columns: 1fr; 
+          grid-template-rows: 1fr auto 1fr;
+           height: 100%;
+}
+.text{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.option{
+    grid-row: 3/4;
+    width: 100%;
+}
+.image{
+    grid-row: 1/2;
+    width: 100%;
+    height: 365px;
+} 
+.image > div{
+    width: 100%;
+   display: flex;
+   justify-content: space-around;
+   margin-top: 10px;
+     font-size: 10px;
+}
+.text-white{
+    font-size: 8px;
+    background-color: white;
+    padding: 5px;
+     border-radius: 8px;
+}
+.img-con > img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.grid{
+    width: 300px;
+}
+
+.petit-text{
+    font-size: 5px;
+}
+option > span{
+    width: 100%;
+}
+}
