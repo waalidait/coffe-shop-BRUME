@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Playfair Display;
+    
 }
 
 body {
@@ -184,6 +184,7 @@ nav>a {
     width: 90%;
     height: 80%;
     border-radius: 10px;
+    align-items: center;
 }
 
 
@@ -194,6 +195,22 @@ nav>a {
     width: 90%;
     height: 80%;
     border-radius: 10px;
+    font-size: 20px;
+}
+
+label:has(input[type="radio"]:checked){
+  background-color: #E9EEDC ;
+  color: rgb(0, 0, 0);
+  border-color: #394B32;
+}
+label:has(input[type="checkbox"]:checked){
+  background-color: #E9EEDC ;
+  color: rgb(0, 0, 0);
+  border-color: #394B32;
+}
+
+input{
+    appearance: none;
 }
 .t-div {
     background-color: white;
@@ -277,6 +294,53 @@ nav>a {
   
 }
 
+.prix{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+   margin-bottom: 20px;
+}
+
+.btn{
+    border: none;
+    padding: 15px 25px 15px 25px;
+    background-color: #394B32;
+    border-radius: 8px;
+    color: white;
+}
+
+.num-dh{
+    font-weight: 700;
+    font-size: 22px;
+    font-family: DM Sans;
+}
+ 
+.hidden{
+    margin-left: 100px;
+     display: none;
+}
+.second-cart{
+    display: flex;
+    justify-content: space-around;
+}
+.page-2{
+    background-color: #E8DBC7;
+    border-radius: 8px;
+    padding-top: 10px;
+}
+.page-2 > div{
+    display: flex;
+    justify-content: space-around;
+}
+.total{
+    background-color: #FFFFFF;
+    height: 400px;
+    padding: 10px;
+} 
+.hidden > p{
+    padding: 20px;
+}
 @media screen and (max-width:550px) {
  .grid{
           grid-template-columns: 1fr; 
