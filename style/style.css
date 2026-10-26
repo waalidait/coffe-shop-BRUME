@@ -318,7 +318,8 @@ input{
  
 .hidden{
     margin-left: 100px;
-     display: none;
+    display: none;
+    margin-top: 30px;
 }
 .second-cart{
     display: flex;
@@ -336,10 +337,34 @@ input{
 .total{
     background-color: #FFFFFF;
     height: 400px;
+    width: 500px;
     padding: 10px;
-} 
+    border-radius: 10px;
+    border: solid 3px black;
+}  
+.slec{
+    background-color: #E9EEDC;
+    width: 30%;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.votre{
+    font-weight: 700;
+    font-size: 20px;
+    padding: 15px;
+}
 .hidden > p{
     padding: 20px;
+}
+
+.cafe-title {
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.1;
 }
 @media screen and (max-width:550px) {
  .grid{
@@ -389,4 +414,97 @@ input{
 option > span{
     width: 100%;
 }
+ .hidden {
+        margin: 20px 8px;
+        padding: 0;
+    }
+
+    .hidden > p {
+        margin-left: 0 !important;
+        padding: 8px 0;
+    }
+.hidden p {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+
+    .pers {
+        font-size: 11px;
+    }
+
+    .pret {
+        font-size: 10px;
+    }
+
+    .second-cart {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .page-2 {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 12px;
+        padding: 10px;
+    }
+
+    .page-2 > div {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .page-2 > div p {
+        font-size: 10px;
+    }
+
+    .page-2 img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .total {
+        width: 100%;
+        height: auto;
+        box-sizing: border-box;
+        padding: 15px;
+        border: 1px solid #E8DBC7;
+        border-radius: 12px;
+    }
+
+    .slec {
+        width: fit-content;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 10px;
+    }
+
+    .votre {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .resu {
+        width: 100%;
+    }
+
+    .total button {
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 14px !important;
+        padding: 12px !important;
+    }
+
+    .total > p:last-child {
+        width: auto !important;
+        font-size: 12px !important;
+        padding: 12px !important;
+    }
+    .cafe-title {
+        font-size: 22px;
+        padding: 10px 5px;
+    }
 }

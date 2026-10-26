@@ -58,7 +58,7 @@ radios.forEach(radio => {
     };
     console.log(objectTotal);
     calculeTotal()
-
+ 
   })
 })
 
@@ -104,4 +104,45 @@ btn.addEventListener("click", function () {
     grid.style.display = "none";
     prix.style.display = "none";
     hidden.style.display = "block";
+    ressuTotal()
 });
+ 
+
+function ressuTotal(){
+  let ressu1 = document.querySelector(".resu");
+ let total = 0
+ ressu1.innerHTML = ""
+
+  Object.keys(objectTotal).forEach(t =>{
+    let option = objectTotal[t]
+
+    if(option !== null){
+      total += option.price;
+
+      let text = document.createElement("div")
+      text.style.display = "flex";
+      text.style.justifyContent = "space-between";
+      text.style.padding = "10px";
+
+      text.innerHTML=`
+      <p>${option.name}</p>
+      <p>${option.price}</p>
+      `
+      ressu1.appendChild(text);
+    }
+  })
+  
+  let totalElement = document.createElement("div");
+
+    totalElement.style.display = "flex";
+    totalElement.style.justifyContent = "space-between";
+    totalElement.style.padding = "10px";
+    totalElement.style.fontWeight = "bold";
+
+    totalElement.innerHTML = `
+        <p>Total</p>
+        <p>${total},00 DH</p>
+    `;
+
+    ressu1.appendChild(totalElement);
+}
