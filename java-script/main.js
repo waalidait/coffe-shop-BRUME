@@ -75,9 +75,9 @@ Inputcheckbox.forEach(Element => {
     }
     calculeTotal()
     console.log(objectTotal);
-
   })
 })
+
 
 function calculeTotal() {
   let total = 0;
