@@ -97,6 +97,7 @@ function search() {
     })
 }
 v.addEventListener("input", search)
+
 /**============================== */
 /**calculer le total */
 /**============================== */
@@ -128,7 +129,6 @@ function ajouterquantite() {
             num_span.textContent++;
 
             coffeeCart[i].quantity = num_span.textContent
-            console.log(coffeeCart);
             calculerTotal()
 
         })
@@ -145,8 +145,7 @@ function ajouterquantite() {
 
     })
 }
-
-
+ 
 /**============================== */
 /**les function */
 /**============================== */
