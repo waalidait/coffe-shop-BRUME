@@ -233,3 +233,13 @@ nav>a {
     box-sizing: border-box;
     transition: 0.3s;
 }
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    background-color: #ccc;
+    border: black;
+    border-radius: 8px;
+    margin: 20px;
+    padding: 12px;
+}

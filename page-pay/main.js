@@ -79,17 +79,20 @@ function afficherprd() {
     });
 }
 
+    /**============================== */
+    /**search */
+    /**============================== */
 let v = document.querySelector(".recherch")
 let container = document.querySelector(".div")
-container.innerHTML = "";
 function search() {
     let input = v.value;
-    // if (input === "") {
-    //     return;
-    // }
+    container.innerHTML = "";
+    if (input === "") {
+        return;
+      }
     coffeeProducts.forEach(index => {
         if (index.name.includes(input)) {
-            container.innerHTML += `<button class= "click">${index.name}</button> <br><br> `
+            container.innerHTML += `<div class="flex"><p class= "click">${index.name}</p> <p>${index.price} DH</p></div> `
         }
     })
 }
