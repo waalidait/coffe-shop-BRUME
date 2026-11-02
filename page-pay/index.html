@@ -29,25 +29,30 @@
             </div>
 
             <form class="pay">
-                <label for="">Cardholder Name</label>
-                    <input type="text" class="name" id="name">
-                 
-                <label for="number">Card Number</label>
-                <input type="text" class="number" id="number">
-                
-                <div class="two-input">
-                    <div>
-                        <label for="month">Month</label>
-                        <input type="number" class="month" placeholder="MM" min="1" max="12">
-                    </div>
-                    <div>
+    <label for="name">Cardholder Name</label>
+    <input type="text" class="name" id="name">
+    <span class="error name-error"></span>
 
-                        <label for="year">Year</label>
-                        <input type="number" class="year" placeholder="YYYY" min="2026" max="2100">
-                    </div>
-                </div>
-                <button>pay now</button>
-            </form>
+    <label for="number">Card Number</label>
+    <input type="text" class="number" id="number">
+    <span class="error number-error"></span>
+
+    <div class="two-input">
+        <div>
+            <label for="month">Month</label>
+            <input type="number" class="month" placeholder="MM" min="1" max="12">
+            <span class="error month-error"></span>
+        </div>
+
+        <div>
+            <label for="year">Year</label>
+            <input type="number" class="year" placeholder="YYYY">
+            <span class="error year-error"></span>
+        </div>
+    </div>
+
+    <button type="submit">Pay now</button>
+</form>
 
  
             <div class="blur">

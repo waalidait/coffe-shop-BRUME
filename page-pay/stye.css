@@ -49,8 +49,8 @@ nav>a {
     padding: 20px;
 }
 
-.pay{
-    background-color: rgb(145, 141, 141);
+.pay{  
+    background-color: rgb(167, 152, 144);
     width: 400px;
     padding: 15px;
     display: flex;
@@ -242,3 +242,193 @@ nav>a {
     margin: 20px;
     padding: 12px;
 }
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin: 5px 0;
+}
+
+.pay button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background: #59ba32;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pay button:hover {
+    background: #459b25;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(89, 186, 50, 0.3);
+}
+
+.pay button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    .cart {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    .add-cart {
+        width: 85%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .pay {
+        width: 85%;
+        box-sizing: border-box;
+    }
+
+    .popup {
+        width: 80%;
+        left: 10%;
+        top: 20%;
+    }
+
+    .x {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .popup .recherch {
+        width: 90%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 550px) {
+
+    .header-section {
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 15px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .num {
+        gap: 10px;
+    }
+
+    .cart {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        margin: 30px 10px;
+    }
+
+    .add-cart {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        padding: 12px;
+        box-sizing: border-box;
+    }
+
+    .coffee-item {
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .coffee-image {
+        width: 60px;
+        height: 60px;
+        margin: 5px;
+        flex-shrink: 0;
+    }
+
+    .coffee-image img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .product-content {
+        flex: 1;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .coffee-info {
+        flex-wrap: wrap;
+        font-size: 13px;
+        align-items: center;
+    }
+
+    .pay {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .name,
+    .number {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .two-input {
+        gap: 10px;
+        margin-left: 0;
+    }
+
+    .two-input > div {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .month,
+    .year {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .popup {
+        width: 92%;
+        left: 4%;
+        top: 20%;
+    }
+
+    .x {
+        margin-left: auto;
+        margin-right: 10px;
+    }
+
+    .popup .recherch {
+        width: 90%;
+    }
+
+    .flex {
+        margin: 10px;
+        padding: 10px;
+        gap: 10px;
+    }
+}
+
+ 

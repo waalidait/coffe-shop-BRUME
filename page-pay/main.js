@@ -145,7 +145,51 @@ function ajouterquantite() {
 
     })
 }
- 
+
+/**============================== */
+/**vakidation input */
+/**============================== */
+ let form = document.querySelector(".pay");
+
+let name = document.querySelector(".name");
+let number = document.querySelector(".number");
+let month = document.querySelector(".month");
+let year = document.querySelector(".year");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    if (name.value.trim() === "") {
+        document.querySelector(".name-error").textContent = "Name is required";
+    }
+    else if (/\d/.test(name.value)) {
+        document.querySelector(".name-error").textContent = "Enter letters only";
+    }
+    else {
+        document.querySelector(".name-error").textContent = "";
+    }
+
+    if (number.value.length !== 16) {
+        document.querySelector(".number-error").textContent = "Enter 16 digits";
+    }
+    else {
+        document.querySelector(".number-error").textContent = "";
+    }
+
+    if (month.value < 1 || month.value > 12 || month.value === "") {
+        document.querySelector(".month-error").textContent = "Invalid month";
+    }
+    else {
+        document.querySelector(".month-error").textContent = "";
+    }
+
+    if (year.value === "" || year.value < 2026) {
+        document.querySelector(".year-error").textContent = "Invalid year";
+    }
+    else {
+        document.querySelector(".year-error").textContent = "";
+    }
+});
 /**============================== */
 /**les function */
 /**============================== */
