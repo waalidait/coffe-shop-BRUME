@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../dist/output.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <p class="bg-green-500 text-white text-center">Du grain à votre tasse. Un café qui vous ressemble.</p>
+        <section class="flex justify-between p-4">
+            <span><img src="../assets/img/Group.png" alt="" width="10"> BRUME</span>
+            <nav>
+                <a href="#">Products</a>
+                <a href="#">Add Product</a>
+
+            </nav>
+
+        </section>
+    </header>
+    <main>
+        <form action="">
+            <div class="max-w-2xl mx-auto p-6 border rounded-lg" id="form-1">
+
+                <p class="text-2xl font-bold text-[#394B32] mb-6">Informations générales </p><br>
+
+                <label for="name">Nom du produit</label>
+                <input type="text" id="name" class="w-full border rounded-lg p-3 mb-4">
+                <span id="errorName" class="text-red-500 text-sm hidden"></span>
+
+                <br><label for="nbr">Prix de base (DH)</label>
+                <input type="number" id="nbr" class="w-full border rounded-lg p-3 mb-4">
+                <span id="errorPrice" class="text-red-500 text-sm hidden"></span><br>
+
+                <label for="desc">Description</label>
+                <textarea id="desc" class="w-full border rounded-lg p-3"></textarea>
+                <span id="errorDesc" class="text-red-500 text-sm hidden"></span>
+                <button
+                    class=" w-full bg-[#394B32] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2D3C28] transition duration-300"
+                    id="next">
+                    next
+                </button>
+            </div>
+
+            <div class="max-w-2xl mx-auto p-6 border rounded-lg  " id="form-2">
+
+                <p class="text-2xl font-bold text-[#394B32] mb-6">
+                    Caractéristiques et options
+                </p>
+
+                <label for="name">
+                   <br> Nom du produit  
+                    <select>
+                        <option value="">Choisir une origine</option>
+                        <option value="Colombie">Colombie</option>
+                        <option value="Éthiopie">Éthiopie</option>
+                        <option value="Brésil">Brésil</option>
+                        <option value="Mélange Maison">Mélange Maison</option>
+                    </select>
+                </label>
+
+ 
+            </div>
+
+        </form>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
