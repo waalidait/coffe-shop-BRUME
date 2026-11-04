@@ -169,7 +169,7 @@ form.addEventListener("submit", function(e) {
         document.querySelector(".name-error").textContent = "";
     }
 
-    if (number.value.length !== 16) {
+    if (!/^\d{16}$/.test(number.value)) {
         document.querySelector(".number-error").textContent = "Enter 16 digits";
     }
     else {
