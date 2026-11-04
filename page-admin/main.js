@@ -1,3 +1,9 @@
+let product={
+    name :"",
+    price: "",
+    desc: ""
+};
+
 let name = document.querySelector("#name");
 let price = document.querySelector("#nbr");
 let desc = document.querySelector("#desc");
@@ -35,8 +41,21 @@ if(desc.value === ""){
     errorDesc.classList.remove("hidden");
      valid = false;
 }
-if(valid){
-   div1.classList.add("hidden")
-   div2.classList.remove("hidden")
+else if(/[0-9]/.test(desc.value)){
+    errorDesc.textContent = "Description ne doit pas contenir des chiffres";
+    errorDesc.classList.remove("hidden");
 }
+if(valid){
+   product.name = name.value
+   product.price = price.value
+   product.desc = desc.value
+   console.log(product)
+}
+})
+
+let range_span = document.getElementById("span-range")
+let input_range = document.getElementById("range")
+
+input_range.addEventListener("change", function () {
+    range_span.textContent = input_range.value
 })
