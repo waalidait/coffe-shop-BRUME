@@ -62,7 +62,7 @@
                     <div>
                         <label for="name" class="block  font-bold mb-4">
                             <br> Nom du produit
-                            <select class="w-full border rounded-lg p-3 mb-4">
+                            <select class="w-full border rounded-lg p-3 mb-4" id="origine">
                                 <option value="">Choisir une origine</option>
                                 <option value="Colombie">Colombie</option>
                                 <option value="Éthiopie">Éthiopie</option>
@@ -81,15 +81,90 @@
                 </div>
 
                 <label class="block">Température</label>
+                <label class="border rounded-lg p-3 inline-block cursor-pointer">
+                    <input type="radio" name="temperature" value="chaud">
+                    Chaud
+                </label>
 
-                <input type="radio" id="chaud" name="temperature" value="chaud">
-                <label for="chaud" style="">Chaud</label>
+                <label class="border rounded-lg p-3 inline-block cursor-pointer">
+                    <input type="radio" name="temperature" value="froid">
+                    Froid
+                </label>
+                <label class="block font-bold mb-3">Tailles disponibles</label>
 
-                <input type="radio" id="froid" name="temperature" value="froid">
-                <label for="froid">Froid</label>
+                <div class="flex gap-3">
+
+                    <label class="inline-flex items-center gap-2 border rounded-full px-4 py-3 cursor-pointer">
+                        <input type="checkbox" name="sizes" value="Small" class="accent-[#394B32]">
+                        Small
+                    </label>
+
+                    <label class="inline-flex items-center gap-2 border rounded-full px-4 py-3 cursor-pointer">
+                        <input type="checkbox" name="sizes" value="Medium" class="accent-[#394B32]">
+                        Medium
+                    </label>
+
+                    <label class="inline-flex items-center gap-2 border rounded-full px-4 py-3 cursor-pointer">
+                        <input type="checkbox" name="sizes" value="Large" class="accent-[#394B32]">
+                        Large
+                    </label>
+
+                </div>
+
+                <label class="block font-bold mb-3">Options de lait</label>
+
+                <div class="flex gap-3 flex-wrap">
+
+                    <label class="inline-flex items-center gap-2 border rounded-full px-4 py-3 cursor-pointer">
+                        <input type="checkbox" name="milk" value="Vache" class="accent-[#394B32]">
+                        Vache
+                    </label>
+
+                    <label class="inline-flex items-center gap-2 border rounded-full px-4 py-3 cursor-pointer">
+                        <input type="checkbox" name="milk" value="Avoine" class="accent-[#394B32]">
+                        Avoine
+                    </label>
+
+                    <label class="inline-flex items-center gap-2 border rounded-full px-4 py-3 cursor-pointer">
+                        <input type="checkbox" name="milk" value="Soja" class="accent-[#394B32]">
+                        Soja
+                    </label>
+
+                    <label class="inline-flex items-center gap-2 border rounded-full px-4 py-3 cursor-pointer">
+                        <input type="checkbox" name="milk" value="Amande" class="accent-[#394B32]">
+                        Amande
+                    </label>
+
+                </div>
+
+                <label class="block font-bold mb-3">Suppléments</label>
+
+                <div class="flex gap-3 flex-wrap">
+
+                    <label class="inline-flex items-center gap-2 border rounded-full px-4 py-3 cursor-pointer">
+                        <input type="checkbox" name="supplements" value="Vanille" class="accent-[#394B32]">
+                        Vanille
+                    </label>
+
+                    <label class="inline-flex items-center gap-2 border rounded-full px-4 py-3 cursor-pointer">
+                        <input type="checkbox" name="supplements" value="Caramel" class="accent-[#394B32]">
+                        Caramel
+                    </label>
+
+                    <label class="inline-flex items-center gap-2 border rounded-full px-4 py-3 cursor-pointer">
+                        <input type="checkbox" name="supplements" value="Noisette" class="accent-[#394B32]">
+                        Noisette
+                    </label>
+                </div>
+                <button id="add-product" class="block border green p-4 rounded-full bg-green-500 text-white mt-4">ajouter le
+                    produit</button>
+
             </div>
+
+
         </form>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="main.js"></script>
 </body>
 
