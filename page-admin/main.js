@@ -12,6 +12,8 @@ let product = {
     supplements: []
 };
 
+let products = []
+
 let name = document.querySelector("#name");
 let price = document.querySelector("#nbr");
 let desc = document.querySelector("#desc");
@@ -19,6 +21,7 @@ let desc = document.querySelector("#desc");
 let errorName = document.querySelector("#errorName");
 let errorPrice = document.querySelector("#errorPrice");
 let errorDesc = document.querySelector("#errorDesc");
+let imageInput = document.querySelector("#imageInput");
 
 let btn = document.querySelector("#next");
 
@@ -87,8 +90,12 @@ function saveForm1() {
     product.name = name.value;
     product.price = price.value;
     product.desc = desc.value;
+    product.image = imageInput.value;
 }
 
+/*=====================*/
+/*por afficher range-input*/
+/*=====================*/
 function updateRange() {
     range_span.textContent = input_range.value;
 }
@@ -105,13 +112,13 @@ btn.addEventListener("click", function (e) {
         div1.classList.add("hidden");
         div2.classList.remove("hidden");
 
-        console.log(product);
     }
 });
 
 /*=====================*/
 /*partie-2 dans la form*/
 /*=====================*/
+
 let add_prd = document.getElementById("add-product");
 let origin = document.querySelector("#origine")
 let selected = document.querySelector('input[name="temperature"]:checked');
@@ -120,7 +127,7 @@ let sizes = document.querySelectorAll('input[name="sizes"]');
 let milk = document.querySelectorAll('input[name="milk"');
 let supplements = document.querySelectorAll('input[name="supplements"]');
 
-add_prd.addEventListener('click', function(e) {
+add_prd.addEventListener('click', function (e) {
     e.preventDefault();
 
     // 1. Récupérer les choix actuels
@@ -130,6 +137,9 @@ add_prd.addEventListener('click', function(e) {
     let selectedMilk = document.querySelectorAll('input[name="milk"]:checked');
     let selectedSupplements = document.querySelectorAll('input[name="supplements"]:checked');
 
+
+    let form = document.querySelector("#form");
+    let productResult = document.querySelector("#product-result");
     // 2. Validation
     if (
         origin.value === "" ||
@@ -174,6 +184,33 @@ add_prd.addEventListener('click', function(e) {
             product.supplements.push(item.value);
         }
     }
+    console.log(product);
 
+    Swal.fire({
+        icon: "success",
+        title: "Excellent !",
+        text: "Le produit a été ajouté avec succès."
+    }).then(() => {
+
+    form.classList.add("hidden");
+
+    productResult.classList.remove("hidden");
+
+    productResult.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" class="w-40 h-40 object-cover">
+
+        <h2>${product.name}</h2>
+        <p>Prix : ${product.price} DH</p>
+        <p>Description : ${product.desc}</p>
+        <p>Origine : ${product.origin}</p>
+        <p>Intensité : ${product.intensity}</p>
+        <p>Température : ${product.temperature}</p>
+        <p>Tailles : ${product.sizes.join(", ")}</p>
+        <p>Lait : ${product.milk.join(", ")}</p>
+        <p>Suppléments : ${product.supplements.join(", ")}</p>
+    `;
+});
+
+    products.push(product);
     console.log(product);
 });

@@ -23,8 +23,8 @@
     </header>
     <main>
 
-        <form action="">
-            <div class="max-w-2xl mx-auto p-8 border rounded-lg hidden " id="form-1">
+        <form action="" id="form">
+            <div class="max-w-2xl mx-auto p-8 border rounded-lg " id="form-1">
 
                 <p class="text-2xl font-bold text-[#394B32] mb-6">Informations générales </p><br>
 
@@ -40,8 +40,9 @@
                 <textarea id="desc" class="w-full border rounded-lg p-3"></textarea>
                 <span id="errorDesc" class="text-red-500 text-sm hidden"></span>
 
-                <label for="imageInput" class="block font-extrabold text-2xl mb-2">ajouter image</label>
-                <input type="file" id="imageInput" accept="image/*" class="w-full border rounded-lg p-3 mb-4 ">
+                <label for="imageInput">Image URL</label>
+                <input type="text" id="imageInput" placeholder="Coller le lien de l'image ici"
+                    class="w-full border rounded-lg p-3 mb-4">
 
                 <button
                     class=" w-full bg-[#394B32] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2D3C28] transition duration-300"
@@ -52,7 +53,7 @@
 
 
 
-            <div class="max-w-2xl mx-auto p-6 border rounded-lg " id="form-2">
+            <div class="max-w-2xl mx-auto p-6 border rounded-lg hidden" id="form-2">
 
                 <p class="text-2xl font-bold text-[#394B32] mb-6">
                     Caractéristiques et options
@@ -156,13 +157,16 @@
                         Noisette
                     </label>
                 </div>
-                <button id="add-product" class="block border green p-4 rounded-full bg-green-500 text-white mt-4">ajouter le
+                <button id="add-product"
+                    class="block border green p-4 rounded-full bg-green-500 text-white mt-4">ajouter le
                     produit</button>
 
             </div>
 
 
         </form>
+
+        <div id="product-result" class="hidden"></div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="main.js"></script>
