@@ -197,18 +197,41 @@ add_prd.addEventListener('click', function (e) {
     productResult.classList.remove("hidden");
 
     productResult.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" class="w-40 h-40 object-cover">
+    <div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg border border-gray-200 flex flex-col items-center text-center gap-4">
 
-        <h2>${product.name}</h2>
-        <p>Prix : ${product.price} DH</p>
-        <p>Description : ${product.desc}</p>
-        <p>Origine : ${product.origin}</p>
-        <p>Intensité : ${product.intensity}</p>
-        <p>Température : ${product.temperature}</p>
-        <p>Tailles : ${product.sizes.join(", ")}</p>
-        <p>Lait : ${product.milk.join(", ")}</p>
-        <p>Suppléments : ${product.supplements.join(", ")}</p>
-    `;
+        <img src="${product.image}" 
+             alt="${product.name}" 
+             class="w-48 h-48 object-cover rounded-xl">
+
+        <h2 class="text-2xl font-bold text-[#394B32]">
+            ${product.name}
+        </h2>
+
+        <p class="text-xl font-bold text-[#796A59]">
+            ${product.price} DH
+        </p>
+
+        <p class="text-gray-500">
+            ${product.desc}
+        </p>
+
+        <div class="w-full border-t border-gray-200 pt-4 space-y-3 text-left">
+
+            <p><strong class="text-[#394B32]">Origine :</strong> ${product.origin}</p>
+
+            <p><strong class="text-[#394B32]">Intensité :</strong> ${product.intensity}/10</p>
+
+            <p><strong class="text-[#394B32]">Température :</strong> ${product.temperature}</p>
+
+            <p><strong class="text-[#394B32]">Tailles :</strong> ${product.sizes.join(", ")}</p>
+
+            <p><strong class="text-[#394B32]">Lait :</strong> ${product.milk.join(", ")}</p>
+
+            <p><strong class="text-[#394B32]">Suppléments :</strong> ${product.supplements.join(", ")}</p>
+
+        </div>
+    </div>
+`;
 });
 
     products.push(product);
