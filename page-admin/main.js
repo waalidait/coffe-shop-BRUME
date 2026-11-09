@@ -74,14 +74,7 @@ function validateForm1() {
 }
 
 
-function saveTemperature() {
-    let selected = document.querySelector('input[name="temperature"]:checked');
-
-    if (selected) {
-        product.temperature = selected.value;
-    }
-
-}
+ 
 
 /*=====================*/
 /*save information*/
@@ -124,7 +117,7 @@ let origin = document.querySelector("#origine")
 let selected = document.querySelector('input[name="temperature"]:checked');
 
 let sizes = document.querySelectorAll('input[name="sizes"]');
-let milk = document.querySelectorAll('input[name="milk"');
+let milk = document.querySelectorAll('input[name="milk"]');
 let supplements = document.querySelectorAll('input[name="supplements"]');
 
 add_prd.addEventListener('click', function (e) {
